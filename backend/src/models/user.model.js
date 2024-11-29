@@ -32,7 +32,7 @@ const userSchema = new Schema(
       required: [true, "Password is required"],
     },
   },
-  { timestamp: true }
+  { timestamps: true }
 );
 
 //hashing the password before saving

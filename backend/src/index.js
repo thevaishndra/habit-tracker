@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv'//for loading env variables
 import connectDB from './database/index.js'
-import { app } from './app.js'
+import { app as application } from './app.js' //middleware conflict was happening when exporting just app
 
 dotenv.config({
     path: './.env'
@@ -8,7 +8,7 @@ dotenv.config({
 
 connectDB()
 .then(() => {
-    app.listen(process.env.PORT || 8000 , () => {
+    application.listen(process.env.PORT || 8000 ,  () => {
         console.log(`Server is running at port : ${process.env.PORT}`);
     })
 })
