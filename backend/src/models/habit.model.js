@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const HabitSchema = new Schema(
+const habitSchema = new Schema(
   {
     userId: {
       type: mongoose.Schema.Types.ObjectId,
