@@ -67,6 +67,7 @@ userSchema.methods.generateAccessToken = function () {
     }
   )
 }
+
 //creating refresh token - long lived
 userSchema.methods.generateRefreshToken = function () {
   return jwt.sign (
