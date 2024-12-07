@@ -80,6 +80,7 @@ userSchema.methods.generateRefreshToken = function () {
     }
   )
 }
-//refesh token is used to get mew access token if current one expires
+//refresh token is used to get mew access token if current one expires
 
 export const User = mongoose.model("User", userSchema)
+
