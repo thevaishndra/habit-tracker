@@ -1,11 +1,9 @@
-import React from 'react'
-import { create } from 'zustand'
-import toast from 'react-hot-toast'
+import { create } from 'zustand';
 
-const useAuthStore = () => {
-  return (
-    <div>useAuthStore</div>
-  )
-}
-
-export default useAuthStore
+export const useAuthStore = create((set) => ({
+  authUser: null,
+  isSigningup: false,
+  isLoggingin: false,
+  isCheckingAuth: true,
+}))
+//it helps to manage the authentication state of the user in the application.
